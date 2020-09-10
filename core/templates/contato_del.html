@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+</div>
+</nav>
+<div class="container sm-3">
+    <form method="post">
+        {% csrf_token %}
+        <p class="h5">Tem certeza que deseja deletar o contato "{{ object }}"?</p>
+            <button type="submit" class="btn btn-danger">Confirmar</button>
+            <a type="button" class="btn btn-warning"
+                href="{% url 'info_contato' object.pk %}">Cancelar
+            </a>
+    </form>
+</div>
+{% endblock %}

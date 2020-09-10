@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+</div>
+</nav>
+<!--  -------------------------------------------------------------------------- -->
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" method="post">
+				{% csrf_token %}
+				<span class="contact100-form-title">
+					Contatos
+				</span>
+
+				<div class="wrap-input100 validate-input bg1" data-validate="Por favor digite seu Nome">
+					<span class="label-input100">NOME COMPLETO *</span>
+					<input class="input100" type="text" id="nome" name="nome" placeholder="Digite seu Nome" value="{{ object.nome }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Por favor digite seu Email (e@a.x)">
+					<span class="label-input100">Email *</span>
+					<input class="input100" type="email" id="email" name="email" placeholder="Digite seu Email" value="{{ object.email }}">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Por favor digite seu Telefone">
+					<span class="label-input100">Telefone *</span>
+					<input class="input100" type="number" maxlength="11" id="phone" name="phone" value="{{ object.phone }}" placeholder="Digite o numero do Telefone">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1" data-validate="Por favor digite seu Endereço">
+					<span class="label-input100">Endereço *</span>
+					<input class="input100" type="text" id="endereco" name="endereco" value="{{ object.endereco }}" placeholder="Digite seu Endereço">
+				</div>
+
+				<div class="container-contact100-form-btn ">
+					<button class="contact100-form-btn">
+						<span>
+							Salvar
+							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock %}

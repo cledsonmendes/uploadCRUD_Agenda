@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+</div>
+</nav>
+<div class="container">
+    <div class="section-header text-center contact100-form-title">
+        <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Informações</h2>
+    </div>
+    <div class="justify-content-start">
+
+                <dt class="col-sm-3 h5 text-secondary">NOME</dt>
+                <dd class="col-sm-9 h4">{{ object.nome }}</dd>
+
+                <dt class="col-sm-3 h5 text-secondary">TELEFONE</dt>
+                <dd class="col-sm-9 h4">{{ object.phone }}</dd>
+
+                <dt class="col-sm-3 h5 text-secondary">EMAIL</dt>
+                <dd class="col-sm-9 h4">{{ object.email }}</dd>
+
+                <dt class="col-sm-3 h5 text-secondary">ENDEREÇO</dt>
+                <dd class="col-sm-9 h4">{{ object.endereco }}</dd>
+        <div class="container">
+            <a type="button" class="btn btn-warning" href="{% url 'upd_contato' object.pk %}">Editar</a>
+            <a type="button" class="btn btn-danger" href="{% url 'del_contato' object.pk %}">Deletar</a>
+            <a type="button" class="btn btn-secondary" href="{% url 'index' %}">Voltar</a>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

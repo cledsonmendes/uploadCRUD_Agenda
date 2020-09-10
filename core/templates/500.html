@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+</div>
+</nav>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+            <p class="h3">OPS! Erro 500</p>
+            <p class="h3">Erro de processamento.</p>
+            <a type="button" class="btn btn-secondary" href="{% url 'index' %}">
+                Voltar para agenda
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

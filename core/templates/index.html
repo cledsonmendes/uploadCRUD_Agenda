@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+</div>
+</nav>
+
+
+      <div class="container">
+        <div class="section-header text-center contact100-form-title">
+          <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Contatos</h2>
+        </div>
+<div class="row">
+
+    {% for contato in contatos %}
+
+        <a class="col-sm-6 col-md-4" href="{% url 'info_contato' contato.pk %}"
+           style="text-decoration: None;">
+
+            <div class="card text-white bg-dark mb-3" style="max-width: 36rem;">
+            <div class="card-body">
+                <h4 class="card-title" style="font-family: Arial;">{{ contato.nome }}</h4>
+                <h6 class="card-text" style="font-family: Arial;">{{ contato.phone }}</h6>
+            </div>
+            </div>
+
+        </a>
+    {% endfor %}
+</div>
+</div>
+<div class="container">
+    <div class="row justify-content-md-center">
+        {% include 'paginacao.html' %}
+    </div>
+</div>
+{% endblock %}
