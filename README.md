@@ -5,3 +5,4 @@
 ```
 Projeto construído para estudos em Linguagem Python
 ```
+Para rodar o servidor Django execute ```python manage.py runserver```
